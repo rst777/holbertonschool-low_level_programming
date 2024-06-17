@@ -2,6 +2,6 @@
 
 int main(void)
 {
-printf ("with proper grammar, but the outcome is a piece of art,");
+printf("with_proper_grammar,_but_the_outcome_is_a_piece_of_art,\n");
 return (0);
 }
