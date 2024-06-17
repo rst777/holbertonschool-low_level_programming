@@ -1,7 +1,13 @@
 #include <stdio.h>
-
+/**
+* main - Entry point
+*
+* Description: 'the program's print text'
+*
+* Return: Always 0 (Success)
+*/
 int main(void)
 {
-printf("with_proper_grammar,_but_the_outcome_is_a_piece_of_art,\n");
+printf("with proper grammar, but the outcome is a piece of art,");
 return (0);
 }
