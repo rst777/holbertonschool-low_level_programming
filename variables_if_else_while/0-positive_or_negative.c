@@ -4,8 +4,8 @@
 /**
 * main - Entry point
 * Description: 'positive_negative'
-
- * Return: Always 0 (Success)
+*
+* Return: Always 0 (Success)
 */
 int main(void)
 {
