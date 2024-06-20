@@ -1,17 +1,13 @@
-#include <stdio.h>
+#include "main.h"
 
+/**
+* main - appel main.h
+* Description: '_putchar'
+*
+* Return: Always 0 (Success)
+*/
 int main(void)
 {
-
-	putchar('_');
-	putchar('p');
-	putchar('u');
-	putchar('t');
-	putchar('c');
-	putchar('h');
-	putchar('a');
-	putchar('r');
-	putchar('\n');
-
+	_putchar(); /*appel la function _putchar dans main.h */
 	return (0);
 }
