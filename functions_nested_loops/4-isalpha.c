@@ -4,7 +4,7 @@
 * _isalpha - vérifie si le caractèr
 *
 * @c: Elle renvoie 1 si le caractère est une lettre alphabétique et
-* 
+*
 * Return: renvoi 0 ou 1.
 */
 int _isalpha(int c)
