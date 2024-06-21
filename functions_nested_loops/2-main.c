@@ -1,15 +1,12 @@
-/* main.c */
-
 #include "main.h"
 
+/**
+ * main - check the code.
+ *
+ * Return: Always 0.
+ */
 int main(void)
-
 {
-	int n;
-
-	for (n = 0; n < 9; n++)
-	{
-	print_alphabet_x10();
-	}
-	return (0);
+    print_alphabet_x10();
+    return (0);
 }
