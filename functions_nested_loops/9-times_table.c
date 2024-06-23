@@ -24,10 +24,10 @@ void times_table(void)
 
 			if (colon != 0)
 			{
-				_putchar(',');
-				_putchar(' '); 
+				_putchar(',');	_putchar(' ');
 			}
-
+		
+				
 			if (produit <= 9)
 			{
 				_putchar(' ');
@@ -37,7 +37,7 @@ void times_table(void)
 			else
 			{
 				_putchar(produit / 10 + '0');
-				_putchar(produit %	10 + '0');
+				_putchar(produit % 10 + '0');
 			}
 		}
 			_putchar('\n');
