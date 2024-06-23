@@ -25,13 +25,13 @@ void times_table(void)
 			if (colon != 0)
 			{
 				_putchar(',');
-				_putchar(' ');
+				_putchar('.');
 			}
 
 
 			if (produit <= 9)
 			{
-				_putchar(' ');
+				_putchar('.');
 				_putchar(produit + '0');
 
 			}
