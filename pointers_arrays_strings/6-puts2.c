@@ -1,8 +1,8 @@
 #include "main.h"
 /**
- * // Trouver la longueur de la chaîne str en parcourant les caractères
+ * Trouver la longueur de la chaîne str en parcourant les caractères
  * Boucle pour imprimer chaque deuxième caractère de la chaîne
- *  Ajouter un saut de ligne à la fin
+ * Ajouter un saut de ligne 
  *
  */
 
