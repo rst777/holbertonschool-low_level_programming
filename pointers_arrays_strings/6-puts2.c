@@ -1,10 +1,10 @@
 #include "main.h"
 /**
- * Trouver la longueur de la chaîne str en parcourant les caractères
- * Boucle pour imprimer chaque deuxième caractère de la chaîne
- * Ajouter un saut de ligne 
- *
- */
+* Description :
+* La fonction parcourt la chaîne de caractères str, en commençant par l'indice
+* et imprime chaque deuxième caractère. Une fois tous les deuxièmes caract�
+* imprimés, elle ajoute automatiquement un saut de lign
+*/
 
 void puts2(char *str)
 
