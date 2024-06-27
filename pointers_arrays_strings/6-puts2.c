@@ -1,14 +1,18 @@
-#include "main.h"
+#include"main.h"
 /**
-* Description :
-* La fonction parcourt la chaîne de caractères str, en commençant par l'indice
-* et imprime chaque deuxième caractère. Une fois tous les deuxièmes caract�
-* imprimés, elle ajoute automatiquement un saut de lign
-*/
+ * puts2 - Imprime chaque deuxième caractère d'une cha�
+ * @str: La chaîne de caractèr
+ *
+ * Description :
+ * Cette fonction parcourt la chaîne de caractères st
+ *
+ */
 
 void puts2(char *str)
 
 {
+
+
 	int i;
 	int j;
 
