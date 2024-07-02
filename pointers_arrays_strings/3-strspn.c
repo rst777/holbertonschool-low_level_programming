@@ -1,4 +1,5 @@
 #include "main.h"
+<<<<<<< HEAD
 /**
  * _strspn - Gets the length of a prefix substring.
  * @s: The main C string to be scanned.
