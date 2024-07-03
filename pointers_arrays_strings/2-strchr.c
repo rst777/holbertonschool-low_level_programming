@@ -1,12 +1,12 @@
 #include "main.h"
 /**
- * _strchr - Localise la première occurrence du caractère c dans la chaîne
+ * _strchr - Localise la premiere occurrence du caractere c dans la chaine
  *
- * @s: La chaîne dans laquelle chercher
- * @c: Le caractère à cherche
+ * @s: La chaine dans laquelle chercher
+ * @c: Le caractere a� cherche
  *
- * Return: Un pointeur vers la première occurrence du caractère c da
- *         ou NULL si le caractère n'est pas trouv�
+ * Return: Un pointeur vers la premiere occurrence du caractere c da
+ *         ou NULL si le caractere n'est pas trouve
  */
 char *_strchr(char *s, char c)
 
