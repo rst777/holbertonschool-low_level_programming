@@ -17,14 +17,14 @@ int main(int argc, char *argv[])
 
 	for (; i < argc; i++)
 	{
-	num = atoi(argv[i]);	/**convertit l'argument en entier*/
+		num = atoi(argv[i]);	/**convertit l'argument en entier*/
 	if (num <= 0)
 	{
 		printf("Error\n");
-		return (1);
+	return (1);
 	}
-	sum += num;	/**Ajoute l'entier a la somme*/
+		sum += num;	/**Ajoute l'entier a la somme*/
 	}
-	printf("%d\n", sum);	/**Affiche la somme des nombres positifs*/
+		printf("%d\n", sum);	/**Affiche la somme des nombres positifs*/
 	return (0);
 }
