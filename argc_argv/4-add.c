@@ -15,11 +15,14 @@ int main(int argc, char *argv[])
 	int num;
 	int i = 1;
 
-	for (; i < argc; i++)
+	(void)argc;	
+	for(; i < argc; i++)
 	{
 		num = atoi(argv[i]);	/**convertit l'argument en entier*/
+	
 	if (num <= 0)
 	{
+	
 		printf("Error\n");
 	return (1);
 	}
