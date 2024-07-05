@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
 	int num;
 	int i = 1;
 
-	(void)argc;
+
 	for (; i < argc; i++)
 	{
 		num = atoi(argv[i]);	/**convertit l'argument en entier*/
