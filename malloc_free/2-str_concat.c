@@ -26,12 +26,12 @@ char *str_concat(char *s1, char *s2)
 		s2 = "";	/* Traiter s2 comme une chaine vide si NULL */
 	}
 
-		for (length1 = 0; s1[length1] != '\0'; length1++)
+	for (length1 = 0; s1[length1] != '\0'; length1++)
 
-		{
-		for (length2 = 0; s2[length2] != '\0'; length2++)
 
-		}
+	for (length2 = 0; s2[length2] != '\0'; length2++)
+
+
 	/* Allouer la mem pour la nouvelle chaine */
 	result = malloc((length1 + length2 + 1) * sizeof(char));
 		if (result == NULL)
