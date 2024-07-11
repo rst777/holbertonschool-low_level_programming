@@ -1,5 +1,5 @@
 #include "main.h"
-#include <string.h>
+#include <stdio.h>
 #include <stdlib.h>
 /**
  * _calloc - Alloue de la mémoire pour un tableau, en utilisant malloc.
@@ -12,31 +12,34 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 
 {
 
-	void *ptr;
-	size_t total_size;
+	char *ptr;
+	unsigned int total_size, i;
 
 	/* Verifier si nmemb ou size est 0 */
-	{
+
 	if (nmemb == 0 || size == 0)
 
 		return (NULL);
-	}
 
 	/* Calculer la taille totale */
-	total_size = nmemb * size;
+	total_size = (nmemb * size);
 
 	/* Allouer la mémoire */
 	ptr = malloc(total_size);
 
 	/* Verifier si malloc a échoué */
-	{
+
 	if (ptr == NULL)
 
-		return (NULL);
-	}
+	return (NULL);
+
 
 	/* Initialiser la mémoire à zéro */
-	memset(ptr, 0, total_size);
 
+	for (i = 0; i < total_size; i++)
+	{
+		ptr[i] = 0;
+
+	}
 	return (ptr);
 }
