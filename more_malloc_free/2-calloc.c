@@ -1,6 +1,6 @@
 #include "main.h"
-#include <stdlib.h>
 #include <string.h>
+
 /**
  * _calloc - Alloue de la mémoire pour un tableau, en utilisant malloc.
  * @nmemb: Nombre d'éléments dans le tableau.
