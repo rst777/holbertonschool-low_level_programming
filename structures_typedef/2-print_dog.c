@@ -1,10 +1,13 @@
 #include "dog.h"
 #include <stdio.h>
+#include <stdlib.h>
 /**
- * struct dog - Structure contenant les informations d'un chien
- * @name: Nom du chien (chaîne de caractères)
- * @age: Âge du chien (flottant)
- * @owner: Propriétaire du chien (chaîne de caractères)
+ * print_dog - Imprime les informations d'un chien
+ * @d: Pointeur vers la structure dog à imprimer
+ *
+ * Description: Imprime le nom, l'âge et le propriétaire du chien.
+ * Si un élément est NULL, imprime (nil) à la place.
+ * Si le pointeur d est NULL, ne fait rien.
  */
 void print_dog(struct dog *d)
 
