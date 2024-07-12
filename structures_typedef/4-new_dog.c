@@ -22,13 +22,13 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 {
 	/* Allouer de la mémoire pour le nouveau chien */
-	dog_t *new_dog = (dog_t *)malloc(sizeof(dog_t));
+	dog_t *new_dog = malloc(sizeof(dog_t));
 		if (new_dog == NULL)
 	{
 		return (NULL);
 	}
 	/* Allouer de la mémoire pour le nom du chien */
-	new_dog->name = (char *)malloc(strlen(name) + 1);
+	new_dog->name = malloc(strlen(name) + 1);
 		if (new_dog->name == NULL)
 	{
 		free(new_dog);
