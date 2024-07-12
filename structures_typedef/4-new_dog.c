@@ -1,6 +1,5 @@
 #include "dog.h"
 #include <stdlib.h>
-#include <stdio.h>
 #include <string.h>
 
 /**
@@ -38,7 +37,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	strcpy(new_dog->name, name);
 
 	/* Allouer de la mémoire pour le nom du propriétaire */
-	new_dog->owner = (char *)malloc(strlen(owner) + 1);
+	new_dog->owner = malloc(strlen(owner) + 1);
 		if (new_dog->owner == NULL)
 	{
 		free(new_dog->name);
