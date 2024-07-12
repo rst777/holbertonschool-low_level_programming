@@ -17,21 +17,20 @@
  * ou NULL si l'allocation échoue.
  */
 dog_t *new_dog(char *name, float age, char *owner)
-
 {
 	dog_t *newD;
 	/* Allouer de la mémoire pour le nouveau chien */
 	newD = malloc(sizeof(dog_t));
 		if (newD == NULL)
 			return (NULL);
-	/* Allouer de la mémoire pour le nom du chien */
+
 		if (name == NULL)
 	{
 		free(newD);
-		free(name);
+		free(owner);
 		return (NULL);
 	}
-	/* Allouer de la mémoire pour le nom du propriétaire */
+
 
 		if (owner == NULL)
 	{
@@ -39,7 +38,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(name);
 		return (NULL);
 	}
-	/* Affecter l'age du chien */
+
 		newD->name = name;
 		newD->age  = age;
 		newD->owner = owner;
