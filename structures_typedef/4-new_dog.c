@@ -21,30 +21,33 @@
 dog_t *new_dog(char *name, float age, char *owner)
 
 {
-	/* Allouer de la mémoire pour la structure du chien */
-	dog_t *newDog = (dog_t *)malloc(sizeof(dog_t));
-
-	if (newDog == NULL)
+	/* Allouer de la mémoire pour le nouveau chien */
+	dog_t *new_dog = (dog_t *)malloc(sizeof(dog_t));
+		if (new_dog == NULL)
+	{
 		return (NULL);
-
-	/* Allouer de la mémoire pour copier le nom du chien */
-	newDog->name = strdup(name);
-		if (newDog->name == NULL)
-		{
-		free(newDog);
+	}
+	/* Allouer de la mémoire pour le nom du chien */
+	new_dog->name = (char *)malloc(strlen(name) + 1);
+		if (new_dog->name == NULL)
+	{
+		free(new_dog);
 		return (NULL);
-		}
+	}
+	strcpy(new_dog->name, name);
 
-	/* Allouer de la mémoire pour copier le nom du propriétaire */
-	newDog->owner = strdup(owner);
-		if (newDog->owner == NULL)
-		{
-		free(newDog->name);
-		free(newDog);
+	/* Allouer de la mémoire pour le nom du propriétaire */
+	new_dog->owner = (char *)malloc(strlen(owner) + 1);
+		if (new_dog->owner == NULL)
+	{
+		free(new_dog->name);
+		free(new_dog);
 		return (NULL);
-		}
+	}
+	strcpy(new_dog->owner, owner);
+
 	/* Affecter l'age du chien */
-	newDog->age = age;
+	new_dog->age = age;
 
-	return (newDog);
+	return (new_dog);
 }
