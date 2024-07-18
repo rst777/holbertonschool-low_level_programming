@@ -1,6 +1,7 @@
 #include "3-calc.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 /**
  * main - Point d'entrée du programme
  * @argc: Nombre d'arguments passés au programme
@@ -32,9 +33,10 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		return (99);
 	}
-
+	if ((operator[0] == '/' || operator[0] == '%') && num2 == 0)
+	{
 	result = operation(num1, num2);
 	printf("%d\n", result);
-
+	}
 	return (0);
 }
