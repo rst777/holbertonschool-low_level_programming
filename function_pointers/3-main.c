@@ -1,4 +1,6 @@
 #include "3-calc.h"
+#include <stdio.h>
+#include <stdlib.h>
 /**
  * main - Point d'entrée du programme
  * @argc: Nombre d'arguments passés au programme
