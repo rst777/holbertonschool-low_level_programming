@@ -16,7 +16,7 @@ typedef struct op
 	int (*f)(int a, int b);
 } op_t;
 
-/* Prototype avec mes functions */
+/* Prototype des functions */
 
 int op_add(int a, int b);
 int op_sub(int a, int b);
