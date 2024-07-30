@@ -24,7 +24,7 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 	new_node->n = n; /* Fixer la valeur du new_nod */
 	new_node->next = NULL; /* Le new_nod sera le premier, donc prev est NULL */
 
-	.if (*head == NULL) /* si la liste est vide NULL */
+	if (*head == NULL) /* si la liste est vide NULL */
 
 {
 	new_node->prev = NULL; /* New_nod est le 1er nod */
