@@ -34,7 +34,7 @@ list_t *add_node_end(list_t **head, const char *str)
 /* Initialise le new_node */
 	new_node->next = NULL;
 
-/* Verid=fier si la liste est vide */
+/* Verifier si la liste est vide */
 	if (*head == NULL)
 {
 	*head = new_node; /* le nouveau nod devient le debut de la liste */
