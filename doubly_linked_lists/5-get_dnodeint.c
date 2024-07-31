@@ -14,7 +14,7 @@ dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 
 	while (head != NULL) /* Traverse la list */
 	{
-	if (i == index) /* Verifie si le nod est nth nod */
+	if (i < index) /* Verifie si le nod est nth nod */
 	return (head);
 	head = head->next;
 	i++;
