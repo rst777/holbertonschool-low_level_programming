@@ -16,13 +16,12 @@ list_t *add_node(list_t **head, const char *str)
 	char *new_str;
 	int len;
 
-	/* Dupliquer la chaîne de caractères */
+	/* Dupliquer la chaine */
 	new_str = strdup(str);
 	if (new_str == NULL)
 		return (NULL);
 
-	/* Calculer la longueur de la chaîne */
-	len = strlen(str);
+	for (len = 0; str[len]; len++)
 
 	/* Allouer de la mémoire pour le nouveau node */
 	new_node = malloc(sizeof(list_t));
