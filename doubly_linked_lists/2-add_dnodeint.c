@@ -25,7 +25,7 @@ new_node->prev = NULL; /* Le new_nod sera le premier, donc prev est NULL */
 new_node->next = *head; /* le new_node pointera sur le vieux head */
 
 if (*head != NULL)
-	(*head)->prev = *head; /* L'ancien nod prev pointe vers le new_nod*/
+	(*head)->prev = new_node; /* L'ancien nod prev pointe vers le new_nod*/
 
 /* Mettre à jour le head de la liste*/
 
