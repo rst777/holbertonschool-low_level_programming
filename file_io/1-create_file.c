@@ -1,42 +1,40 @@
 #include "main.h"
 #include <unistd.h> /* Pour write(), close()*/
-#include <stdio.h> /* Pour perror*/
 #include <sys/stat.h> /* Pour les permissions*/
 #include <fcntl.h> /*/ Pour open */
 #include <string.h>
-
+/**
+ * create_file - Crée un fichier et écrit du contenu dans celui-ci.
+ * @filename: Le nom du fichier à créer.
+ * @text_content: Le contenu à écrire dans le fichier. Peut être NULL.
+ *
+ * Return: 1 en cas de succès, -1 en cas d'échec.
+ */
 
 int create_file(const char *filename, char *text_content)
 {
-	int fd;
-	ssize_t bytes_written; /* Déclaration pout=r la taille de l'écriture */
+		int fd;
+		ssize_t written;
+		ssize_t len;
 
 	if (filename == NULL)
+		return (-1);
+/*
+* Ouvre le fichier en mode écriture, crée-le s'il n'existe pas,
+* et le tronque s'il existe déjà avec permission
+*/
+		fd = open(filename, O_WRONLY | O_CREAT | O_TRUNC, S_IRUSR | S_IWUSR);
+		if (fd == -1)
 	{
 		return (-1);
 	}
-/* Ouvre le fichier avec les options suivantes : */
-/* O_CREAT : Crée le fichier s'il n'existe pas */
-/* O_WRONLY : Ouvre en écriture seulement */
-/* O_TRUNC : Tronque (vide) le fichier s'il existe déjà */
-/* 0600 : Permissions rw------- */
-
-	fd = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0600);
-	if (fd == -1)
+/* Si text_content est NULL, ne rien écrire (fichier vide) */
+		if (text_content != NULL)
 	{
-	perror("Erreur lors de l'ouverture du fichier");
-	return (-1); /* Erreur d'ouverture du fichier */
-	}
-
-/* Si text_content n'est pas NULL, écris le contenu dans le fichier */
-	if (text_content != NULL)
-	{
-		size_t length = strlen(text_content);
-
-		bytes_written = write(fd, text_content, length);
-		if (bytes_written == -1)
+		len = strlen(text_content);
+		written = write(fd, text_content, len);
+		if (written != len)
 		{
-		perror("Erreur lors de l'écriture dans le fichier");
 		close(fd);
 		return (-1); /* Erreur d'écriture */
 		}
@@ -44,7 +42,6 @@ int create_file(const char *filename, char *text_content)
 	/* Ferme le fichier */
 	if (close(fd) == -1)
 	{
-		perror("Erreur lors de la fermeture du fichier");
 		return (-1); /* Erreur de fermeture */
 	}
 	return (1); /* Succès */
