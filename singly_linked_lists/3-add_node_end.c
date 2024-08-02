@@ -2,52 +2,52 @@
 #include <stdlib.h>
 #include <string.h>
 /**
- * add_node_end - adds a new node at the end of a list_t list
- * @head: double pointer to the head of the list
- * @str: string to be duplicated and added to the new node
+ * add_node_end - Ajoute un nouveau nœud à la fin de la liste_t.
+ * @head: Double pointeur vers la tête de la liste.
+ * @str: Chaîne de caractères à dupliquer et ajouter au nouveau nœud.
  *
- * Return: address of the new element, or NULL if it failed
+ * Return: Adresse du nouvel élément, ou NULL si l'ajout échoue.
  */
-
 list_t *add_node_end(list_t **head, const char *str)
 {
 	list_t *new_node;
 	list_t *temp;
+	char *new_str;
+	int len;
+	/* Dupliquer la chaine */
+	new_str = strdup(str);
+	if (new_str == NULL)
+		return (NULL);
 
-/* Allouer la memoire */
+	for (len = 0; str[len]; len++)
+
+	/* Allouer de la mémoire pour le nouveau node */
 	new_node = malloc(sizeof(list_t));
+	if (new_node == NULL)
 	{
-		if (new_node == NULL)
+		free(new_str); /* Libérer la mémoire allouée pour la chaîne */
 		return (NULL);
 	}
-/* Dupliquer la chaine*/
-	new_node->str = strdup(str);
-	if (new_node->str == NULL)
+	/* Initialiser le nouveau node */
+	new_node->str = new_str;
+	new_node->len = len;
+	new_node->next = NULL; /* Le new node est le dernier donc next est NULL */
+
+	/* Ajoute le new node aà la fin de la liste */
+		if (*head == NULL)
 	{
-		free(new_node);
-		return (NULL);
+		/* La liste est vide le new node devient le head */
+			*head = new_node;
 	}
-/* Assigner la longueur de la chaine */
-
-	new_node->len = strlen(str);
-
-/* Initialise le new_node */
-	new_node->next = NULL;
-
-/* Verifier si la liste est vide */
-	if (*head == NULL)
-{
-	*head = new_node; /* le nouveau nod devient le debut de la liste */
-	return (new_node);
-}
-/* Trouver la fin de la liste */
-	temp = *head;
-
-	while (temp->next != NULL)
+	else
 	{
-	temp = temp->next;
+		/* Trouver le dernier node */
+		temp = *head;
+		while (temp->next != NULL)
+		{
+		temp = temp->next;
+		}
+		temp->next = new_node; /* Ajouter le nouveau node à la fin */
 	}
-/* Ajouter le new_nod à la fin */
-		temp->next = new_node;
 	return (new_node);
 }
