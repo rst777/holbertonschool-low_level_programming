@@ -53,7 +53,7 @@ int append_text_to_file(const char *filename, char *text_content)
 /* Vérifier si l'écriture a réussi */
 		if (written == -1)
 		{
-		return(-1);
+		return (-1);
 		}
 	return (1);
 }
