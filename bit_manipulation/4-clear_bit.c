@@ -1,0 +1,26 @@
+#include "main.h"
+/**
+ * clear_bit - Met à 0 la valeur du bit à un index donné
+ * @n: Pointeur vers le nombre dont on veut modifier le bit
+ * @index: Index du bit que l'on veut mettre à 0, en commençant par 0
+ *
+ * Return: 1 si ça a fonctionné, ou -1 en cas d'erreur
+ */
+int clear_bit(unsigned long int *n, unsigned int index)
+
+{
+
+	unsigned long int mask;
+/* Vérifier si l'index est hors des limites */
+	if (index >= sizeof(unsigned long int) * 8)
+	{
+		return (-1);
+	}
+	/* Créer un mask avec un 0 à la position de l'index */
+	mask = ~(1ul << index);
+
+/* Utiliser l'opération ET bit à bit pour mettre le bit à 0 */
+	*n &= mask;
+
+	return (1);
+}
