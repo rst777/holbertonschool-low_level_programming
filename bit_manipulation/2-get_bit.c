@@ -12,7 +12,7 @@
 int get_bit(unsigned long int n, unsigned int index)
 {
 /* Vérifier si l'index est hors des limites */
-	if (index >= sizeof(unsigned long int) * CHAR_BIT)
+	if (index >= sizeof(unsigned long int) * 8)
 		return (-1);
 
 /* Décalage à droite du nombre et obtenir le bit le plus à droite */
